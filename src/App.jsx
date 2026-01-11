@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import { supabase } from './supabaseClient'
+import { useVisitorTracking } from './useVisitorTracking'
 import './App.css'
 
 function App() {
+  // Track page visits
+  useVisitorTracking()
+  
   const [formData, setFormData] = useState({
     nameArabic: '',
     nameEnglish: '',
